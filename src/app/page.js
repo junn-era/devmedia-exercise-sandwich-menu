@@ -2,6 +2,8 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 import Menu from "./components/Menu";
+import { CiMenuBurger } from "react-icons/ci";
+import { CgClose } from "react-icons/cg";
 
 export default function Home() {
 
@@ -16,7 +18,7 @@ export default function Home() {
 
       <header className={styles.top}>
         <button className={styles.button} onClick={atualizarMenu}>
-          {menuAberto ? 'Fechar Menu' : 'Abrir Menu'}
+          {menuAberto ? <CgClose /> : <CiMenuBurger />}
         </button>
       </header>
 
